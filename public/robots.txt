@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mkservices1.github.io/imran-ali-khan.github.io/sitemap-index.xml
+Sitemap: https://imran-ali-khan.github.io/sitemap-index.xml
