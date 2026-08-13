@@ -1,0 +1,27 @@
+---
+import { caseStudies } from '@/data/projects';
+import ProjectCaseStudy from '@/components/ProjectCaseStudy.astro';
+import ShippedGrid from '@/components/ShippedGrid.astro';
+---
+
+<section id="projects" class="section py-20 sm:py-28" aria-labelledby="projects-heading">
+  <div class="reveal max-w-2xl">
+    <p class="section-label">Projects</p>
+    <h2 id="projects-heading" class="mt-3 text-3xl font-semibold text-ink-50 sm:text-4xl">
+      Selected work, in depth
+    </h2>
+    <p class="mt-4 text-ink-400">
+      Five case studies that show how I approach problems end-to-end — not just the UI, but the architecture and trade-offs behind it.
+    </p>
+  </div>
+
+  <div>
+    {caseStudies.map((project, index) => (
+      <ProjectCaseStudy project={project} index={index} />
+    ))}
+  </div>
+
+  <div class="reveal mt-16 border-t border-ink-800 pt-16">
+    <ShippedGrid />
+  </div>
+</section>

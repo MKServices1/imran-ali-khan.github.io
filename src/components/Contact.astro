@@ -1,0 +1,54 @@
+---
+import { profile } from '@/data/profile';
+---
+
+<section id="contact" class="relative overflow-hidden border-t border-ink-800 py-24 sm:py-32">
+  <div
+    class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[380px] w-[600px] -translate-x-1/2 rounded-full bg-signal/10 blur-[140px]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="section text-center">
+    <p class="reveal section-label justify-center">Contact</p>
+    <h2 class="reveal mx-auto mt-4 max-w-2xl text-3xl font-semibold text-ink-50 sm:text-4xl lg:text-5xl" style="animation-delay: 60ms;">
+      Let's build something that ships.
+    </h2>
+    <p class="reveal mx-auto mt-5 max-w-xl text-ink-400" style="animation-delay: 120ms;">
+      {profile.availability} and open to Flutter engineering roles and freelance projects — especially ones where understanding the real-world process matters as much as the code.
+    </p>
+
+    <div class="reveal mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row" style="animation-delay: 180ms;">
+      <a href={`mailto:${profile.email}`} class="btn-primary">
+        Email me
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        Connect on LinkedIn
+      </a>
+    </div>
+
+    <dl class="reveal mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 border-t border-ink-800 pt-10 text-left sm:grid-cols-3" style="animation-delay: 240ms;">
+      <div>
+        <dt class="text-xs uppercase tracking-[0.1em] text-ink-500">Email</dt>
+        <dd class="mt-2">
+          <a href={`mailto:${profile.email}`} class="text-sm text-ink-200 transition-colors hover:text-signal break-all">
+            {profile.email}
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.1em] text-ink-500">Phone</dt>
+        <dd class="mt-2">
+          <a href={`tel:${profile.phone.replace(/\s/g, '')}`} class="text-sm text-ink-200 transition-colors hover:text-signal">
+            {profile.phone}
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.1em] text-ink-500">Location</dt>
+        <dd class="mt-2 text-sm text-ink-200">{profile.location}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

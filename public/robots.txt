@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imran-ali-khan.pages.dev/sitemap-index.xml

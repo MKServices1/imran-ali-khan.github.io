@@ -1,0 +1,122 @@
+---
+import { profile } from '@/data/profile';
+
+const links = [
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#approach', label: 'Approach' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-ink-800/80 bg-ink-950/80 backdrop-blur-md">
+  <nav class="section flex h-16 items-center justify-between" aria-label="Primary">
+    <a href="#main" class="font-mono text-sm font-medium tracking-tight text-ink-50">
+      Imran<span class="text-signal">.</span>dev
+    </a>
+
+    <ul class="hidden items-center gap-8 md:flex">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-sm text-ink-300 transition-colors hover:text-ink-50"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="hidden items-center gap-5 md:flex">
+      <a
+        href={profile.links.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-ink-300 transition-colors hover:text-ink-50"
+        aria-label="GitHub profile"
+      >
+        GitHub
+      </a>
+      <a
+        href={profile.resumeFile}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-ink-300 transition-colors hover:text-ink-50"
+      >
+        Résumé
+      </a>
+      <a href="#contact" class="btn-primary !px-5 !py-2.5 text-sm">
+        Let's talk
+      </a>
+    </div>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="flex h-11 w-11 items-center justify-center rounded-md text-ink-100 md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden border-t border-ink-800 md:hidden">
+    <ul class="section flex flex-col gap-1 py-4">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="block rounded-md px-2 py-3 text-base text-ink-200 transition-colors hover:bg-ink-800 hover:text-ink-50"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <a
+          href={profile.resumeFile}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-md px-2 py-3 text-base text-ink-200 transition-colors hover:bg-ink-800 hover:text-ink-50"
+        >
+          Résumé (PDF)
+        </a>
+      </li>
+      <li class="pt-2">
+        <a href="#contact" class="btn-primary w-full">Let's talk</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    iconOpen?.classList.toggle('hidden', isOpen);
+    iconClose?.classList.toggle('hidden', !isOpen);
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,20 @@
+---
+import { profile } from '@/data/profile';
+---
+
+<section id="about" class="section py-20 sm:py-28" aria-labelledby="about-heading">
+  <div class="grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr]">
+    <div class="reveal">
+      <p class="section-label">About</p>
+      <h2 id="about-heading" class="mt-3 text-3xl font-semibold text-ink-50 sm:text-4xl">
+        Why this role
+      </h2>
+    </div>
+
+    <div class="reveal max-w-2xl space-y-5" style="animation-delay: 80ms;">
+      {profile.aboutNarrative.map((paragraph) => (
+        <p class="text-ink-300 leading-relaxed">{paragraph}</p>
+      ))}
+    </div>
+  </div>
+</section>

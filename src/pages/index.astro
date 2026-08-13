@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import Experience from '@/components/Experience.astro';
+import Projects from '@/components/Projects.astro';
+import Skills from '@/components/Skills.astro';
+import Approach from '@/components/Approach.astro';
+import Achievements from '@/components/Achievements.astro';
+import About from '@/components/About.astro';
+import Contact from '@/components/Contact.astro';
+import { profile } from '@/data/profile';
+
+const title = `${profile.name} — ${profile.role} | Lahore, Pakistan`;
+const description =
+  'Senior Flutter Developer with 4.5+ years shipping production Android & iOS apps — Clean Architecture, offline-first sync, real-time messaging, and a SaaS product built from scratch. Available immediately.';
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <Hero />
+  <Experience />
+  <Projects />
+  <Skills />
+  <Approach />
+  <Achievements />
+  <About />
+  <Contact />
+</BaseLayout>

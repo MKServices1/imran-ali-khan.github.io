@@ -1,0 +1,30 @@
+---
+import { skillGroups } from '@/data/skills';
+---
+
+<section id="skills" class="section py-20 sm:py-28" aria-labelledby="skills-heading">
+  <div class="reveal max-w-2xl">
+    <p class="section-label">Skills</p>
+    <h2 id="skills-heading" class="mt-3 text-3xl font-semibold text-ink-50 sm:text-4xl">
+      Technical toolkit
+    </h2>
+    <p class="mt-4 text-ink-400">
+      Organized by what it's used for, not ranked by percentage — the tags below are technologies used in shipped, production work.
+    </p>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-ink-800 bg-ink-800 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      skillGroups.map((group, i) => (
+        <div class="reveal bg-ink-950 p-6" style={`animation-delay: ${i * 60}ms`}>
+          <h3 class="font-mono text-2xs uppercase tracking-[0.15em] text-signal">{group.category}</h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <li class="tag">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

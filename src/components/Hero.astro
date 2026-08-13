@@ -1,0 +1,61 @@
+---
+import { profile } from '@/data/profile';
+---
+
+<section class="relative overflow-hidden pt-20 sm:pt-28">
+  <!-- Subtle background grid — purely decorative, no motion -->
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 opacity-[0.07]"
+    style="background-image: linear-gradient(to right, #6b7280 1px, transparent 1px), linear-gradient(to bottom, #6b7280 1px, transparent 1px); background-size: 56px 56px;"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -top-40 right-0 -z-10 h-[420px] w-[420px] rounded-full bg-signal/10 blur-[120px]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="section pb-20 sm:pb-28">
+    <div class="reveal flex items-center gap-2 text-sm text-ink-300">
+      <span class="relative flex h-2 w-2">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-signal"></span>
+      </span>
+      {profile.availability} &middot; {profile.location}
+    </div>
+
+    <h1 class="reveal mt-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight text-ink-50 sm:text-5xl lg:text-6xl" style="animation-delay: 60ms;">
+      {profile.heroHeadline}
+    </h1>
+
+    <p class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-ink-300 sm:text-xl" style="animation-delay: 120ms;">
+      {profile.heroSubline}
+    </p>
+
+    <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row" style="animation-delay: 180ms;">
+      <a href="#projects" class="btn-primary">
+        View my work
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-secondary">
+        Get in touch
+      </a>
+    </div>
+
+    <div class="reveal mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-ink-800 pt-8 text-sm text-ink-400" style="animation-delay: 240ms;">
+      <span class="font-mono text-2xs uppercase tracking-[0.15em] text-ink-500">Core stack</span>
+      <span>Flutter</span>
+      <span class="text-ink-700">·</span>
+      <span>Dart</span>
+      <span class="text-ink-700">·</span>
+      <span>Clean Architecture</span>
+      <span class="text-ink-700">·</span>
+      <span>Firebase</span>
+      <span class="text-ink-700">·</span>
+      <span>REST APIs</span>
+      <span class="text-ink-700">·</span>
+      <span>CI/CD</span>
+    </div>
+  </div>
+</section>

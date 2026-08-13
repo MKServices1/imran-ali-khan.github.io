@@ -1,0 +1,24 @@
+---
+import { achievements } from '@/data/profile';
+---
+
+<section class="section py-20 sm:py-28" aria-labelledby="achievements-heading">
+  <div class="reveal max-w-2xl">
+    <p class="section-label">Track record</p>
+    <h2 id="achievements-heading" class="mt-3 text-3xl font-semibold text-ink-50 sm:text-4xl">
+      Real numbers, nothing inflated
+    </h2>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-ink-800 bg-ink-800 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      achievements.map((item, i) => (
+        <div class="reveal bg-ink-950 p-7" style={`animation-delay: ${i * 60}ms`}>
+          <p class="font-mono text-3xl font-semibold text-signal sm:text-4xl">{item.value}</p>
+          <p class="mt-3 text-sm font-medium text-ink-100">{item.label}</p>
+          <p class="mt-1 text-xs text-ink-500">{item.detail}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
