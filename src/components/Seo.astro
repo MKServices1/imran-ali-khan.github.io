@@ -4,24 +4,22 @@ import { profile } from '@/data/profile';
 interface Props {
   title?: string;
   description?: string;
-  path?: string;
 }
 
 const {
   title = `${profile.name} — ${profile.role}`,
   description = profile.heroSubline,
-  path = '/',
 } = Astro.props;
 
-const canonicalURL = new URL(path, Astro.site);
-const ogImageURL = new URL('/og-image.png', Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(`${import.meta.env.BASE_URL}og-image.png`, Astro.site);
 
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: profile.name,
   jobTitle: profile.role,
-  url: Astro.site?.toString(),
+  url: new URL(import.meta.env.BASE_URL, Astro.site).toString(),
   email: `mailto:${profile.email}`,
   telephone: profile.phone,
   address: {
@@ -73,7 +71,7 @@ const personJsonLd = {
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageURL} />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+<link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
 
 <script type="application/ld+json" is:inline set:html={JSON.stringify(personJsonLd)} />

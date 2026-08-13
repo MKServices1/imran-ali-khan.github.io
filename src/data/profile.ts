@@ -38,7 +38,7 @@ export const profile = {
     "Over the last two years my work has shifted. I spend less time on mechanical implementation — AI tools like Claude Code and Cursor have taken that over — and more time with stakeholders, understanding what they actually need and writing it down properly. That shift is why roles centered on understanding a real-world process, not just writing code, interest me most.",
   ],
 
-  resumeFile: '/imran-ali-khan-flutter-developer.pdf',
+  resumeFile: 'imran-ali-khan-flutter-developer.pdf',
 };
 
 export const engineeringApproach = [
