@@ -38,9 +38,14 @@ import { profile } from '@/data/profile';
         </dd>
       </div>
       <div>
-        <dt class="text-xs uppercase tracking-[0.1em] text-ink-500">Phone</dt>
+        <dt class="text-xs uppercase tracking-[0.1em] text-ink-500">Phone · WhatsApp</dt>
         <dd class="mt-2">
-          <a href={`tel:${profile.phone.replace(/\s/g, '')}`} class="text-sm text-ink-200 transition-colors hover:text-signal">
+          <a
+            href={profile.links.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-ink-200 transition-colors hover:text-signal"
+          >
             {profile.phone}
           </a>
         </dd>

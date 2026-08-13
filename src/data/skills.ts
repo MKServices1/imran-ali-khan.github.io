@@ -40,6 +40,6 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: 'AI-assisted Development',
-    items: ['Claude Code', 'Cursor', 'Antigravity'],
+    items: ['Prompt Engineering', 'Claude Code', 'Cursor', 'Antigravity'],
   },
 ];

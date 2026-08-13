@@ -17,6 +17,8 @@ export const profile = {
   links: {
     linkedin: 'https://linkedin.com/in/imran-ali--khan',
     github: 'https://github.com/MKServices1',
+    // Same number as `phone` above, in wa.me click-to-chat format.
+    whatsapp: 'https://wa.me/923339837704',
   },
 
   // Short positioning line used in <title> tags, meta description, hero eyebrow.
@@ -35,7 +37,7 @@ export const profile = {
     "I started at BJS Soft Solutions, migrating legacy Windows systems to Flutter and building workforce management apps — admin, manager, supervisor and worker roles, with hardware control through platform channels.",
     "At Senarios I moved deeper into architecture: offline-first storage, syncing data with the server, and real-time messaging.",
     "Most recently at ISKAAN Tech, I built a SaaS product from scratch and upgraded several live CRM apps for Dubai-based clients. The company downsized in 2025, so I'm available immediately.",
-    "Over the last two years my work has shifted. I spend less time on mechanical implementation — AI tools like Claude Code and Cursor have taken that over — and more time with stakeholders, understanding what they actually need and writing it down properly. That shift is why roles centered on understanding a real-world process, not just writing code, interest me most.",
+    "Over the last two years my work has shifted. I spend less time on mechanical implementation — AI tools like Claude Code and Cursor, directed through deliberate prompt engineering, have taken that over — and more time with stakeholders, understanding what they actually need and writing it down properly. That shift is why roles centered on understanding a real-world process, not just writing code, interest me most.",
   ],
 
   resumeFile: 'imran-ali-khan-flutter-developer.pdf',
@@ -65,7 +67,7 @@ export const engineeringApproach = [
   {
     title: 'AI-assisted, not AI-replaced',
     description:
-      'Claude Code and Cursor handle mechanical implementation so more time goes into understanding requirements and system design.',
+      'Claude Code and Cursor, driven by deliberate prompt engineering, handle mechanical implementation so more time goes into understanding requirements and system design.',
   },
   {
     title: 'Requirements before code',

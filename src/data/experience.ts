@@ -25,13 +25,14 @@ export const experience: Role[] = [
       'Led redesign of live client CRM apps and built a new SaaS product from scratch, owning architecture, integrations, and release management.',
     highlights: [
       'Led redesign and refactoring of multiple cross-platform real estate CRM applications, upgrading Flutter SDK versions and improving code quality and maintainability.',
-      'Designed and developed a new SaaS product, handling architecture setup, API integrations, deep linking, and password-reset workflows using Dio and GetX.',
+      'Designed and developed a new SaaS product, handling architecture setup, API integrations, deep linking, and password-reset workflows using Dio.',
       'Implemented state management with BLoC and Provider for scalable, maintainable app logic.',
+      'Used AI coding tools (Claude Code, Cursor) with deliberate prompt engineering to speed up implementation, spending more time on architecture and requirements.',
       'Built responsive, user-friendly UI screens from wireframes and design guidelines, ensuring consistent UX across platforms.',
       'Managed app deployment to the Play Store and TestFlight, integrating Shorebird for faster, safer app releases.',
       'Collaborated in Agile teams — sprint planning, code reviews, and maintaining code hygiene through testing and refactoring.',
     ],
-    tech: ['Flutter', 'Dart', 'GetX', 'BLoC', 'Provider', 'Dio', 'Shorebird', 'Deep Linking'],
+    tech: ['Flutter', 'Dart', 'BLoC', 'Provider', 'Dio', 'Shorebird', 'Deep Linking', 'Claude Code', 'Prompt Engineering'],
   },
   {
     company: 'Senarios Pvt Limited',

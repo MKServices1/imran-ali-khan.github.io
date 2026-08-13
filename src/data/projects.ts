@@ -41,18 +41,18 @@ export const caseStudies: CaseStudy[] = [
     problem:
       'ISKAAN needed a new SaaS product built with no existing codebase to inherit from — every architectural decision, from state management to deep-linking, had to be made and justified from day one.',
     approach: [
-      'Set up the app architecture and project structure from scratch, choosing GetX for state management and navigation.',
+      'Set up the app architecture and project structure from scratch, choosing BLoC and Provider for state management.',
       'Integrated Dio for networking and built the API layer, including deep linking and password-reset workflows.',
-      'Implemented BLoC and Provider alongside GetX for logic that benefited from stricter, more scalable state boundaries.',
+      'Used AI coding tools (Claude Code, Cursor) with deliberate prompt engineering to speed up mechanical implementation, freeing up time for architecture decisions and requirements work.',
       'Built responsive UI screens directly from wireframes and design guidelines, keeping platform-specific UX consistent across Android and iOS.',
     ],
     architecture:
-      'Feature-first structure with GetX for routing/DI, Dio-based API layer, and BLoC/Provider for modules requiring predictable state transitions (auth, password reset, deep-linked flows).',
+      'Feature-first structure with Dio-based API layer and BLoC/Provider for modules requiring predictable state transitions (auth, password reset, deep-linked flows).',
     challenge:
       'Deep linking and password-reset flows both need to interrupt the app\'s normal navigation stack correctly — getting this right without a legacy codebase to reference required careful routing design up front.',
     result:
       'Shipped a working SaaS product with deep linking and password-reset flows functioning reliably in production, deployed to the Play Store and TestFlight with Shorebird integrated for fast OTA releases.',
-    tech: ['Flutter', 'Dart', 'GetX', 'BLoC', 'Provider', 'Dio', 'Deep Linking', 'Shorebird'],
+    tech: ['Flutter', 'Dart', 'BLoC', 'Provider', 'Dio', 'Deep Linking', 'Shorebird', 'Claude Code', 'Prompt Engineering'],
   },
   {
     slug: 'bjs-workforce',
@@ -224,14 +224,6 @@ export const shipped: ShippedApp[] = [
     category: 'Trips & adventures · UAE',
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.AllOut.app',
-      appStore: 'https://apps.apple.com/gb/app/all-out-trips-adventures-uae/id1670310616',
-    },
-  },
-  {
-    name: '100X AI Business Advisor',
-    category: 'AI business advisor chat',
-    links: {
-      appStore: 'https://apps.apple.com/us/app/100x-ai-business-advisor-chat/id6471428456',
     },
   },
   {
@@ -259,14 +251,6 @@ export const shipped: ShippedApp[] = [
     name: 'Klick',
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.klick.app',
-      appStore: 'https://apps.apple.com/us/app/klick-app/id6444500663',
-    },
-  },
-  {
-    name: 'RunFlo',
-    links: {
-      playStore: 'https://play.google.com/store/apps/details?id=com.runflo.app&hl=en',
-      appStore: 'https://apps.apple.com/us/app/run-flo/id6503602099',
     },
   },
 ];
