@@ -16,7 +16,7 @@ export const profile = {
 
   links: {
     linkedin: 'https://linkedin.com/in/imran-ali--khan',
-    github: 'https://github.com/MKServices1',
+    github: 'https://github.com/imran-ali-khan',
     // Same number as `phone` above, in wa.me click-to-chat format.
     whatsapp: 'https://wa.me/923339837704',
   },
