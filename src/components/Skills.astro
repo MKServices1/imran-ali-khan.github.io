@@ -16,7 +16,7 @@ import { skillGroups } from '@/data/skills';
   <div class="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-ink-800 bg-ink-800 sm:grid-cols-2 lg:grid-cols-4">
     {
       skillGroups.map((group, i) => (
-        <div class="reveal bg-ink-950 p-6" style={`animation-delay: ${i * 60}ms`}>
+        <div class="reveal card-hover bg-ink-950 p-6" style={`animation-delay: ${i * 60}ms`}>
           <h3 class="font-mono text-2xs uppercase tracking-[0.15em] text-signal">{group.category}</h3>
           <ul class="mt-4 flex flex-wrap gap-2">
             {group.items.map((item) => (

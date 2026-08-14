@@ -12,7 +12,7 @@ import StoreLinks from '@/components/StoreLinks.astro';
   <ul class="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-ink-800 bg-ink-800 sm:grid-cols-2 lg:grid-cols-3">
     {
       shipped.map((app) => (
-        <li class="reveal bg-ink-950 p-5 transition-colors hover:bg-ink-900">
+        <li class="reveal card-hover bg-ink-950 p-5">
           <p class="font-medium text-ink-100">{app.name}</p>
           {app.category && <p class="mt-1 text-xs text-ink-500">{app.category}</p>}
           <div class="mt-4">

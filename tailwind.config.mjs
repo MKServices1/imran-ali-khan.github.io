@@ -19,10 +19,12 @@ export default {
           100: '#e6e8ec',
           50: '#f5f6f8',
         },
+        // Flutter-blue accent, a deliberate nod to the platform this
+        // portfolio is about, not a generic teal.
         signal: {
-          DEFAULT: '#5eead4',
-          dim: '#2dd4bf',
-          bright: '#99f6e4',
+          DEFAULT: '#38bdf8',
+          dim: '#0ea5e9',
+          bright: '#7dd3fc',
         },
       },
       fontFamily: {
@@ -38,6 +40,8 @@ export default {
       animation: {
         'fade-up': 'fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
+        float: 'float 9s ease-in-out infinite',
+        'float-slow': 'float 13s ease-in-out infinite',
       },
       keyframes: {
         fadeUp: {
@@ -47,6 +51,10 @@ export default {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-16px, 18px) scale(1.06)' },
         },
       },
     },

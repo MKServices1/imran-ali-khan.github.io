@@ -18,7 +18,15 @@ import { experience, education } from '@/data/experience';
       experience.map((role, index) => (
         <li class="reveal grid grid-cols-1 gap-6 border-t border-ink-800 pt-10 lg:grid-cols-[220px_1fr]" style={`animation-delay: ${index * 80}ms`}>
           <div>
-            <p class="font-mono text-2xs uppercase tracking-[0.15em] text-signal">
+            <p class="flex items-center gap-2 font-mono text-2xs uppercase tracking-[0.15em] text-signal">
+              {role.end === 'Present' ? (
+                <span class="relative flex h-1.5 w-1.5 flex-shrink-0">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60" />
+                  <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-signal" />
+                </span>
+              ) : (
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-signal/50" />
+              )}
               {role.start} - {role.end}
             </p>
             <h3 class="mt-2 text-lg font-semibold text-ink-50">{role.company}</h3>
