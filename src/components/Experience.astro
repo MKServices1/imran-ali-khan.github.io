@@ -19,7 +19,7 @@ import { experience, education } from '@/data/experience';
         <li class="reveal grid grid-cols-1 gap-6 border-t border-ink-800 pt-10 lg:grid-cols-[220px_1fr]" style={`animation-delay: ${index * 80}ms`}>
           <div>
             <p class="font-mono text-2xs uppercase tracking-[0.15em] text-signal">
-              {role.start} — {role.end}
+              {role.start} - {role.end}
             </p>
             <h3 class="mt-2 text-lg font-semibold text-ink-50">{role.company}</h3>
             <p class="mt-1 text-sm text-ink-400">{role.title}</p>
@@ -49,7 +49,7 @@ import { experience, education } from '@/data/experience';
     <li class="reveal grid grid-cols-1 gap-6 border-t border-ink-800 pt-10 lg:grid-cols-[220px_1fr]">
       <div>
         <p class="font-mono text-2xs uppercase tracking-[0.15em] text-ink-500">
-          {education.start} — {education.end}
+          {education.start} - {education.end}
         </p>
         <h3 class="mt-2 text-lg font-semibold text-ink-50">{education.school}</h3>
         <p class="mt-1 text-sm text-ink-400">{education.degree}</p>

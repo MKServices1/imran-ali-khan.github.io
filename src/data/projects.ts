@@ -6,7 +6,7 @@
 //
 // To add a new case study: copy an object in `caseStudies` and fill it in.
 // To add a quick "also shipped" entry: add an object to `shipped`.
-// See README.md → "How to add a new project" for the full guide.
+// See README.md, "How to add a new project" for the full guide.
 // ─────────────────────────────────────────────────────────────────────────
 
 export type StoreLinks = {
@@ -33,25 +33,25 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: 'iskaan-saas',
-    name: 'SaaS Product — Built from Scratch',
-    tagline: 'New SaaS platform, architected and built end-to-end at ISKAAN Tech',
+    name: 'SaaS Product, Built from Scratch',
+    tagline: 'New SaaS platform, architected and built end to end at ISKAAN Tech',
     role: 'Software Engineer (Flutter)',
     company: 'ISKAAN Tech',
-    product: 'A new SaaS product built from a blank repository — architecture, auth flows, and integrations owned end-to-end.',
+    product: 'A new SaaS product built from a blank repository, with the architecture, auth flows, and integrations all owned end to end.',
     problem:
-      'ISKAAN needed a new SaaS product built with no existing codebase to inherit from — every architectural decision, from state management to deep-linking, had to be made and justified from day one.',
+      'ISKAAN needed a new SaaS product with no existing codebase to build on, which meant every architectural decision, from state management to deep linking, had to be made and justified from day one.',
     approach: [
-      'Set up the app architecture and project structure from scratch, choosing BLoC and Provider for state management.',
-      'Integrated Dio for networking and built the API layer, including deep linking and password-reset workflows.',
-      'Used AI coding tools (Claude Code, Cursor) with deliberate prompt engineering to speed up mechanical implementation, freeing up time for architecture decisions and requirements work.',
-      'Built responsive UI screens directly from wireframes and design guidelines, keeping platform-specific UX consistent across Android and iOS.',
+      "Set up the app's architecture and project structure from scratch, settling on BLoC and Provider for state management.",
+      'Built the API layer on Dio, including deep linking and the password-reset flow.',
+      'Leaned on AI coding tools like Claude Code and Cursor, guided by careful prompt engineering, to move faster through the mechanical parts of the build and spend more time on architecture and requirements.',
+      'Turned wireframes and design guidelines into responsive UI screens, keeping the experience consistent across Android and iOS.',
     ],
     architecture:
-      'Feature-first structure with Dio-based API layer and BLoC/Provider for modules requiring predictable state transitions (auth, password reset, deep-linked flows).',
+      'A feature-first structure with a Dio-based API layer, and BLoC or Provider for the modules that needed predictable state transitions, like auth, password reset, and deep-linked flows.',
     challenge:
-      'Deep linking and password-reset flows both need to interrupt the app\'s normal navigation stack correctly — getting this right without a legacy codebase to reference required careful routing design up front.',
+      "Deep linking and password-reset flows both need to interrupt the app's normal navigation stack correctly. Without a legacy codebase to reference, getting that right meant careful routing design up front, not trial and error.",
     result:
-      'Shipped a working SaaS product with deep linking and password-reset flows functioning reliably in production, deployed to the Play Store and TestFlight with Shorebird integrated for fast OTA releases.',
+      'Shipped a working SaaS product with deep linking and password reset running reliably in production, deployed to the Play Store and TestFlight, with Shorebird wired up for fast over-the-air releases.',
     tech: ['Flutter', 'Dart', 'BLoC', 'Provider', 'Dio', 'Deep Linking', 'Shorebird', 'Claude Code', 'Prompt Engineering'],
   },
   {
@@ -63,20 +63,20 @@ export const caseStudies: CaseStudy[] = [
     product:
       'A multi-role workforce management system (Admin, Manager, Supervisor, Worker) migrated from a legacy Windows product, plus AR-enabled sales applications.',
     problem:
-      'An existing Windows product needed to become a modern, mobile-first Flutter app, while a separate module required direct hardware interaction — something standard Flutter APIs don\'t expose.',
+      "An existing Windows product needed to become a modern, mobile-first Flutter app. A separate module also needed direct hardware interaction, something standard Flutter APIs simply don't expose.",
     approach: [
-      'Used Platform Channels to bridge Flutter and native Android code for hardware control, since no Flutter plugin covered the required interactions.',
-      'Converted the codebase from GetX to BLoC for better modularity as the app grew across four distinct user roles.',
-      'Implemented clean architecture (MVC) for the AR-enabled sales application and MVVM with Dio-based API modules for the task and workflow management app.',
-      'Built permission-based access control so Admins, Managers, Supervisors and Workers each see only the data and actions relevant to their role.',
-      'Contributed to Journey Planner and Task Assignment modules with real-time APIs for supervisor/worker coordination, and supported e-learning and certification-tracking features.',
+      'Bridged Flutter and native Android code with Platform Channels to get hardware control, since no existing plugin covered what was needed.',
+      'Migrated the codebase from GetX to BLoC for better modularity as the app grew to cover four distinct user roles.',
+      'Used clean architecture (MVC) for the AR-enabled sales app, and MVVM with Dio-based API modules for the task and workflow management app.',
+      'Built permission-based access control so Admins, Managers, Supervisors, and Workers each only saw the data and actions relevant to them.',
+      'Contributed to the Journey Planner and Task Assignment modules with real-time APIs for supervisor and worker coordination, and supported e-learning and certification-tracking features.',
     ],
     architecture:
-      'MVC for the AR sales app, MVVM with Dio for task/workflow modules, BLoC for cross-cutting state — all gated by a role-based permission layer (Admin / Manager / Supervisor / Worker).',
+      'MVC for the AR sales app, MVVM with Dio for the task and workflow modules, and BLoC for cross-cutting state, all sitting behind a role-based permission layer for Admin, Manager, Supervisor, and Worker.',
     challenge:
-      'Platform Channels require writing and maintaining native-side code alongside Dart, and getting hardware state changes to propagate back into Flutter\'s widget tree without janky UI updates took deliberate architecture work.',
+      "Platform Channels require writing and maintaining native-side code alongside Dart, and getting hardware state changes to propagate back into Flutter's widget tree without janky UI updates took deliberate architecture work.",
     result:
-      'Delivered a production multi-role workforce app with working hardware integration and structured, secure data visibility per role. Also led a team of 2 developers on this codebase — owning task allocation and code review.',
+      'Delivered a production multi-role workforce app with working hardware integration and structured, secure data visibility per role. I also led a two-person dev team on this codebase, handling task allocation and code review.',
     tech: ['Flutter', 'Dart', 'Platform Channels', 'BLoC', 'MVC', 'MVVM', 'Dio', 'REST APIs'],
   },
   {
@@ -86,14 +86,14 @@ export const caseStudies: CaseStudy[] = [
     role: 'Flutter Developer',
     product: 'A single-app food delivery system covering customer ordering, rider tracking, and restaurant control in one codebase.',
     problem:
-      'Three very different user journeys — ordering, delivering, and restaurant management — needed to live in one app without becoming an unmaintainable tangle of conditionals.',
+      'Three very different user journeys (ordering, delivering, and restaurant management) needed to live inside one app without turning into an unmaintainable tangle of conditionals.',
     approach: [
-      'Built core modules for customer ordering, real-time rider tracking, and restaurant-side order control using GetX.',
-      'Integrated Google Maps for live location tracking and optimized REST API calls to keep the experience responsive during peak ordering.',
+      'Built the core modules for customer ordering, real-time rider tracking, and restaurant-side order control, all using GetX.',
+      'Integrated Google Maps for live location tracking and tuned the REST API calls to keep things responsive during peak ordering hours.',
     ],
-    architecture: 'Role-driven single codebase using GetX for state and navigation, with Google Maps and optimized RESTful API integration for real-time location data.',
+    architecture: 'A single, role-driven codebase using GetX for state and navigation, with Google Maps and a tuned RESTful API layer handling real-time location data.',
     challenge:
-      'Real-time location updates for riders need to stay accurate and battery-efficient without flooding the UI with re-renders — this required careful state scoping in GetX.',
+      'Real-time location updates for riders need to stay accurate and battery-efficient without flooding the UI with re-renders, which meant scoping GetX state carefully.',
     result: 'Shipped to both the Play Store and App Store, with all three role-based modules functioning in a single production app.',
     tech: ['Flutter', 'GetX', 'Google Maps API', 'REST APIs', 'Real-Time Location'],
     links: {
@@ -108,16 +108,16 @@ export const caseStudies: CaseStudy[] = [
     role: 'Flutter Developer',
     product: 'A US real estate platform enabling property purchases, direct mailing, and scheduled multi-home tours with agents.',
     problem:
-      'Buyers needed a way to research, get contacted about, and tour multiple properties with agents in one coordinated flow — without the scheduling and tracking logic living entirely on the backend.',
+      'Buyers needed one coordinated flow to research properties, get contacted about them, and schedule tours with agents, without pushing all the scheduling and tracking logic onto the backend.',
     approach: [
-      'Implemented BLoC for predictable state across the property search, mailing, and tour-scheduling flows.',
-      'Used Dio for API integration and deep linking to route users directly into specific property or tour views.',
-      'Integrated Google Maps for property location and Mixpanel for user behavior tracking.',
-      'Wired up Firebase for social logins and dynamic links to support shareable property links.',
+      'Used BLoC to keep state predictable across property search, mailing, and tour-scheduling flows.',
+      'Used Dio for API integration, plus deep linking to route users straight into a specific property or tour view.',
+      'Integrated Google Maps for property locations and Mixpanel to track user behavior.',
+      'Wired up Firebase for social logins and dynamic links so property listings could be shared directly.',
     ],
-    architecture: 'BLoC-driven state management with Dio for networking, Firebase for auth/dynamic links, and Mixpanel instrumenting the funnel from browse to scheduled tour.',
+    architecture: 'BLoC-driven state management, Dio handling networking, Firebase covering auth and dynamic links, and Mixpanel instrumenting the whole funnel from browsing to a scheduled tour.',
     challenge:
-      'Coordinating multi-home tour scheduling with multiple agents\' availability, inside a mobile UI that still needed to feel simple to a home buyer, required careful state and UX design.',
+      "Coordinating multi-home tour scheduling with multiple agents' availability, inside a mobile UI that still needed to feel simple to a home buyer, required careful state and UX design.",
     result: 'Delivered a working buyer-facing platform for property discovery, direct mailing, and scheduled multi-home agent tours.',
     tech: ['Flutter', 'BLoC', 'Dio', 'Deep Linking', 'Google Maps API', 'Mixpanel', 'Firebase'],
   },
@@ -130,14 +130,14 @@ export const caseStudies: CaseStudy[] = [
     problem:
       'Agents and admins needed one app that could switch between property-management and CRM contexts depending on their role and permissions, without maintaining two separate apps.',
     approach: [
-      'Built an MVVM architecture with Provider for state management, keeping the property-management and CRM modules cleanly separated but switchable at runtime.',
+      'Built an MVVM architecture with Provider for state management, keeping the property-management and CRM modules cleanly separated, but switchable at runtime.',
       'Integrated REST APIs for leads, listings, viewings, tasks, notes, schedules, and a calendar view.',
       'Wired up FCM for push notifications so agents get real-time updates on lead and task activity.',
-      'Implemented permission-based login so the same app surfaces different modules and data depending on the logged-in user\'s role.',
+      "Implemented permission-based login so the same app surfaces different modules and data depending on the logged-in user's role.",
     ],
-    architecture: 'MVVM with Provider, REST API layer, FCM for push notifications, and a role-based module-switching layer gating access to Property Management vs. CRM.',
+    architecture: 'MVVM with Provider, a REST API layer, FCM for push notifications, and a role-based module-switching layer that gates access between Property Management and CRM.',
     challenge:
-      'Switching entire feature modules in and out based on runtime permissions — without duplicating navigation or state logic — required a deliberate MVVM boundary between modules.',
+      'Switching entire feature modules in and out based on runtime permissions, without duplicating navigation or state logic, required a deliberate MVVM boundary between modules.',
     result: 'Live production CRM used by Dubai-based real estate agents, covering the full lead-to-close workflow: leads, listings, viewings, tasks, notes, schedules, and calendar.',
     tech: ['Flutter', 'MVVM', 'Provider', 'REST APIs', 'FCM', 'Role-Based Access'],
     links: {
@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-// Every other published app — shown as a compact "also shipped" grid.
+// Every other published app, shown as a compact "also shipped" grid.
 // Descriptions are kept minimal and factual; no assumptions beyond what
 // the app name/store listing itself makes clear.
 export type ShippedApp = {
@@ -159,7 +159,7 @@ export type ShippedApp = {
 export const shipped: ShippedApp[] = [
   {
     name: 'Fire Kirin Guide',
-    category: 'Static guide app — tips, rewards & Firestore-backed support',
+    category: 'Static guide app for tips, rewards, and Firestore-backed support',
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.firekirin.guide',
     },
@@ -204,7 +204,7 @@ export const shipped: ShippedApp[] = [
     },
   },
   {
-    name: 'DeliveriX — User',
+    name: 'DeliveriX User App',
     category: 'Delivery platform',
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.vga.deliveryx',
@@ -212,7 +212,7 @@ export const shipped: ShippedApp[] = [
     },
   },
   {
-    name: 'DeliveriX — Driver',
+    name: 'DeliveriX Driver App',
     category: 'Delivery platform',
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.vga.deliverix.driver',

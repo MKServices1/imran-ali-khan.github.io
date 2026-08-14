@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────
-// SKILLS — grouped for fast scanning by technical recruiters.
+// SKILLS, grouped for fast scanning by technical recruiters.
 // Deliberately no percentages / skill bars: levels aren't quantifiable
 // honestly, so we list what's actually been used in production instead.
 // ─────────────────────────────────────────────────────────────────────────

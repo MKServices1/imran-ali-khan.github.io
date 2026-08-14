@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────
 // SINGLE SOURCE OF TRUTH for personal information.
 // Everything on the site is derived from this file and ./experience.ts,
-// ./projects.ts and ./skills.ts. Update your info here — see README.md
+// ./projects.ts and ./skills.ts. Update your info here, see README.md
 // "How to update content" for details.
 // ─────────────────────────────────────────────────────────────────────────
 
@@ -22,22 +22,22 @@ export const profile = {
   },
 
   // Short positioning line used in <title> tags, meta description, hero eyebrow.
-  tagline: 'Senior Flutter Developer building production mobile apps for real businesses',
+  tagline: 'Senior Flutter Developer who ships production apps real businesses depend on',
 
-  // Hero headline — kept factual, no invented claims.
-  heroHeadline: 'I build Flutter apps that ship, scale, and stay maintainable.',
+  // Hero headline, kept factual, no invented claims.
+  heroHeadline: "I build Flutter apps that ship on time and hold up long after launch.",
 
   heroSubline:
-    "4.5+ years shipping production Android & iOS apps — from hardware-integrated workforce tools to real-time CRMs and a SaaS platform built from scratch. Currently based in Lahore, available immediately.",
+    "Four and a half years building production Android and iOS apps, from hardware-integrated workforce tools to real-time CRMs and a SaaS platform I built from the ground up. Based in Lahore, available to start right away.",
 
-  // Longer narrative for the About / Engineering Approach section — derived
-  // directly from the user's own words, lightly edited for the page.
+  // Longer narrative for the About / Engineering Approach section, written
+  // in the user's own voice and lightly edited for the page.
   aboutNarrative: [
-    "I'm a Flutter developer from Lahore with about four and a half years of experience and a degree in Software Engineering.",
-    "I started at BJS Soft Solutions, migrating legacy Windows systems to Flutter and building workforce management apps — admin, manager, supervisor and worker roles, with hardware control through platform channels.",
-    "At Senarios I moved deeper into architecture: offline-first storage, syncing data with the server, and real-time messaging.",
-    "Most recently at ISKAAN Tech, I built a SaaS product from scratch and upgraded several live CRM apps for Dubai-based clients. The company downsized in 2025, so I'm available immediately.",
-    "Over the last two years my work has shifted. I spend less time on mechanical implementation — AI tools like Claude Code and Cursor, directed through deliberate prompt engineering, have taken that over — and more time with stakeholders, understanding what they actually need and writing it down properly. That shift is why roles centered on understanding a real-world process, not just writing code, interest me most.",
+    "I'm a Flutter developer based in Lahore with about four and a half years of experience and a degree in Software Engineering.",
+    "I started at BJS Soft Solutions, migrating legacy Windows systems to Flutter and building workforce management apps for admin, manager, supervisor, and worker roles, with hardware control through platform channels.",
+    "At Senarios, I moved deeper into architecture work: offline-first storage, syncing data with the server, and real-time messaging.",
+    "Most recently, at ISKAAN Tech, I built a SaaS product from scratch and upgraded several live CRM apps for clients in Dubai. The company downsized in 2025, which is why I'm available right away.",
+    "Over the last two years, my work has shifted. I spend less time on the mechanical parts of implementation, since AI tools like Claude Code and Cursor, used with careful prompt engineering, now handle a lot of that, and more time with stakeholders, figuring out what they actually need and writing it down properly. That's why roles centered on understanding a real business process, not just writing code, interest me the most.",
   ],
 
   resumeFile: 'imran-ali-khan-flutter-developer.pdf',
@@ -47,32 +47,32 @@ export const engineeringApproach = [
   {
     title: 'Architecture first',
     description:
-      'I default to Clean Architecture and MVC/MVVM so business logic stays independent of UI and backend changes don’t cascade through the app.',
+      "I lean on Clean Architecture and MVC or MVVM by default, so business logic stays independent from the UI and a backend change doesn't ripple through the whole app.",
   },
   {
     title: 'Offline-first where it matters',
     description:
-      'Built local storage and sync layers so apps stay usable without a connection and reconcile cleanly when it returns.',
+      'I build local storage and sync layers so an app still works without a connection, and reconciles cleanly once one comes back.',
   },
   {
     title: 'State management with intent',
     description:
-      'BLoC, Provider, Riverpod or GetX — chosen per project based on team size and complexity, not habit.',
+      'BLoC, Provider, Riverpod, or GetX, picked per project based on team size and complexity, not out of habit.',
   },
   {
     title: 'Deployment is part of the job',
     description:
-      'Comfortable owning releases end-to-end: Play Store, TestFlight, and Shorebird for over-the-air patches without a full store review.',
+      'Comfortable owning releases end to end: Play Store, TestFlight, and Shorebird for over-the-air patches without a full store review.',
   },
   {
     title: 'AI-assisted, not AI-replaced',
     description:
-      'Claude Code and Cursor, driven by deliberate prompt engineering, handle mechanical implementation so more time goes into understanding requirements and system design.',
+      'I use Claude Code and Cursor for the mechanical parts of implementation, guided by careful prompt engineering, which frees up more time for understanding requirements and system design.',
   },
   {
     title: 'Requirements before code',
     description:
-      'The last two years have shifted my focus toward working directly with stakeholders to translate real-world processes into correct technical specs before writing a line of code.',
+      'The last two years have shifted my focus toward working directly with stakeholders, translating real-world processes into correct technical specs before writing a line of code.',
   },
 ];
 
@@ -85,7 +85,7 @@ export const achievements = [
   {
     label: 'Years of experience',
     value: '4.5+',
-    detail: 'Across 3 companies, consistently in Flutter',
+    detail: 'Across three companies, consistently in Flutter',
   },
   {
     label: 'Live client CRMs upgraded',
